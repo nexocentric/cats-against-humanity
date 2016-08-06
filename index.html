@@ -39,7 +39,9 @@
 			}
 			
 			function getNextLocation() {
-				if (Math.floor((Math.random() * 100)) > 499) {
+				var ab = [1, 0];
+				var selection = ab[Math.floor(Math.random() * ab.length)];
+				if (selection == 1) {
 					window.location.href = "http://www.nexocentric.com/cats-against-humanity/blue.html";
 				}
 				else
