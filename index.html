@@ -1,0 +1,92 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Meow the Humanity!!</title>
+		<link rel="stylesheet" href="css/foundation.css">
+
+		<script src="https://use.typekit.net/qzp8xkl.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+		<style type="text/css">
+			body {
+				background-color: lightblue;
+			}
+			.overlay-container {
+				position: relative; /* <-- Set as the reference for the positioned overlay */
+			}
+
+			.overlay-container .overlay {
+				position: absolute; /* <-- Remove the overlay from normal flow         */
+				bottom: 0;          /* <-- Keep the overlay at the bottom of the box   */
+				left: 0;            /* <-- Set left and right properties to 0          */
+				right: 0;           /*     In order to expand the overlay horizontally */
+
+				padding: 0.4rem;
+				background-color: rgba(255, 255, 255, 0.7);
+			}
+		</style>
+
+		<script type="text/javascript">
+			var ronSwansonQuoteApi = "http://ron-swanson-quotes.herokuapp.com/v2/quotes";
+			var ajaxTimeout = 300000;
+
+			function displayQuote(json) {
+				console.log(json);
+				$("#quote-holder").text(json[0]);
+			}
+
+			function getRonSwansonQuote() {
+				$.ajax({
+					url: ronSwansonQuoteApi,
+					type: 'GET',
+					success: displayQuote,
+					dataType: 'json',
+					// complete: function() {
+					// 	pollFlickrServerFunctionTimeoutHandle = toggleFunctionTimeout(pollFlickrServer, flickrPollingInterval)
+					// },
+					timeout: ajaxTimeout
+				});
+			}
+
+			//---------------------------------------------------------
+			// run the main program
+			//---------------------------------------------------------
+			window.onload = getRonSwansonQuote;
+		</script>
+	</head>
+	<body>
+		<div class="row">
+			<div class="small-4 columns">&nbsp;</div>
+			<div class="small-4 columns"><h5 class="text-center" style="font-family: 'azo-sans-uber',sans-serif;">Cats Against Humanity!</h5></div>
+			<div class="small-4 columns">&nbsp;</div>
+		</div>
+
+		<div class="row">
+			<div class="small-4 columns">&nbsp;</div>
+			<div class="small-4 columns">
+				<div class="overlay-container">
+					<img src="http://thecatapi.com/api/images/get?api_key=MTA3NjE3&format=src&type=png&size=med">
+					<p id="quote-holder" class="overlay text-justify" style="font-family: 'azo-sans-uber',sans-serif; font-size: rem-calc(2);"></p>
+				</div>
+			</div>
+			<div class="small-4 columns">&nbsp;</div>
+		</div>
+
+		<div class="row">
+			<div class="small-4 columns">&nbsp;</div>
+			<div class="small-2 columns">
+				<button type="button" class="success button expanded">FUNNY!</button>
+			</div>
+			<div class="small-2 columns">
+				<button type="button" class="alert button expanded">NOT FUNNY!</button>
+			</div>
+			<div class="small-4 columns">&nbsp;</div>
+		</div>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/foundation.min.js"></script>
+	</body>
+</html>
