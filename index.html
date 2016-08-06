@@ -37,6 +37,16 @@
 				console.log(json);
 				$("#quote-holder").text(json[0]);
 			}
+			
+			function getNextLocation() {
+				if (((Math.Random() * 100) % 2) == 0) {
+					window.location.href = "http://www.nexocentric.com/cats-against-humanity/blue.html"
+				}
+				else
+				{
+					window.location.href = "http://www.nexocentric.com/cats-against-humanity/pink.html"
+				}
+			}
 
 			function getRonSwansonQuote() {
 				$.ajax({
@@ -78,10 +88,10 @@
 		<div class="row">
 			<div class="small-4 columns">&nbsp;</div>
 			<div class="small-2 columns">
-				<button type="button" class="success button expanded">FUNNY!</button>
+				<button type="button" onclick="getNextLocation()" class="success button expanded">FUNNY!</button>
 			</div>
 			<div class="small-2 columns">
-				<button type="button" class="alert button expanded">NOT FUNNY!</button>
+				<button type="button" onclick="window.location.href='www.google.com' class="alert button expanded">NOT FUNNY!</button>
 			</div>
 			<div class="small-4 columns">&nbsp;</div>
 		</div>
