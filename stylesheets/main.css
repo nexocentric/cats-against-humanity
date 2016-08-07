@@ -1,5 +1,5 @@
 .main {
-	background-color: purple;
+	background-color: silver;
 }
 
 .pink {
@@ -21,7 +21,6 @@
 	right: 0;           /*     In order to expand the overlay horizontally */
 
 	padding: 0.4rem;
-	background-color: rgba(255, 255, 255, 0.7);
 }
 
 .meme-text {
