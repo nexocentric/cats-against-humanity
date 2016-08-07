@@ -6,28 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Meow the Humanity!!</title>
 		<link rel="stylesheet" href="stylesheets/foundation.css">
+		<link rel="stylesheet" href="stylesheets/main.css">
 
 		<script src="https://use.typekit.net/qzp8xkl.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-		<style type="text/css">
-			body {
-				background-color: lightblue;
-			}
-			.overlay-container {
-				position: relative; /* <-- Set as the reference for the positioned overlay */
-			}
-
-			.overlay-container .overlay {
-				position: absolute; /* <-- Remove the overlay from normal flow         */
-				bottom: 0;          /* <-- Keep the overlay at the bottom of the box   */
-				left: 0;            /* <-- Set left and right properties to 0          */
-				right: 0;           /*     In order to expand the overlay horizontally */
-
-				padding: 0.4rem;
-				background-color: rgba(255, 255, 255, 0.7);
-			}
-		</style>
 
 		<script type="text/javascript">
 			var ronSwansonQuoteApi = "http://ron-swanson-quotes.herokuapp.com/v2/quotes";
@@ -57,10 +39,10 @@
 			window.onload = getRonSwansonQuote;
 		</script>
 	</head>
-	<body>
+	<body class="blue">
 		<div class="row">
 			<div class="small-1 large-4 columns">&nbsp;</div>
-			<div class="small-10 large-4 columns"><h5 class="text-center" style="font-family: 'azo-sans-uber',sans-serif;">Cats Against Humanity!</h5></div>
+			<div class="small-10 large-4 columns"><h5 class="text-center title-text">Cats Against Humanity!</h5></div>
 			<div class="small-1 large-4 columns">&nbsp;</div>
 		</div>
 
@@ -69,7 +51,7 @@
 			<div class="small-10 large-4 columns">
 				<div class="overlay-container">
 					<img src="http://thecatapi.com/api/images/get?api_key=MTA3NjE3&format=src&type=png&size=med">
-					<p id="quote-holder" class="overlay text-justify" style="font-family: 'azo-sans-uber',sans-serif; font-size: rem-calc(2);"></p>
+					<p id="quote-holder" class="overlay text-justify meme-text"></p>
 				</div>
 			</div>
 			<div class="small-1 large-4 columns">&nbsp;</div>
