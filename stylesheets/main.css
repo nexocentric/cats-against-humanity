@@ -27,9 +27,11 @@
 .meme-text {
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'azo-sans-uber',sans-serif; font-size: rem-calc(2);
 }
 
 .title-text {
     color: black;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-family: 'azo-sans-uber',sans-serif; font-size: rem-calc(2);
 }
